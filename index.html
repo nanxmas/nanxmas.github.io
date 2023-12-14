@@ -1,16 +1,87 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+<style>
+  body {
+    background-color: black;
+  }
+  .star {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: yellow;
+    font-size: 40px;
+  }
+  .tree {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid limegreen;
+    margin: 20px auto;
+  }
+  .tree:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: -50px;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 200px solid limegreen;
+  }
+  .tree:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: -100px;
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 250px solid limegreen;
+  }
+  .stump {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: sienna;
+    margin-left: -20px;
+    margin-top: 150px;
+  }
+  .decor {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+  }
+</style>
 </head>
 <body>
-<p class="p1">你好世界</p>
+<div class="star">★</div>
+<div class="tree">
+  <div class="stump"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 20%; left: 40%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 30%; left: 30%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 30%; left: 60%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 40%; left: 20%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 40%; left: 50%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 40%; left: 80%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 50%; left: 10%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 50%; left: 40%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 50%; left: 70%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 50%; left: 90%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 60%; left: 5%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 60%; left: 25%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 60%; left: 45%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 60%; left: 65%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 60%; left: 85%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 70%; left: 15%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 70%; left: 35%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 70%; left: 55%;"></div>
+  <div class="decor" style="width: 8px; height: 8px; top: 70%; left: 75%;"></div>
+</div>
 </body>
 </html>
