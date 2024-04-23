@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chiikawa井字遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 背景音樂 -->
+    <audio id="backgroundMusic" src="music/BGM动画吉伊卡哇小可爱 原声带 (耳コピ)_哔哩哔哩.mp3" autoplay loop></audio>
+    <!-- 插入遊戲放置者聲音 -->
+    <audio id="unicornSound" src="music/吉伊放置.mp3"></audio>
+    <audio id="dragonSound" src="music/小八放置.mp3"></audio>
+    <audio id="unicornWinSound" src="music/吉伊勝利.mp3"></audio>
+    <audio id="dragonWinSound" src="music/小八勝利.mp3"></audio>
+
+
+    <div class="wrapper">
+        <div class="current-status" id="currentStatus">
+            <img src="圖/吉伊.png" id="currentBeastImg" alt="">
+            <p>&nbsp; 's turn</p>
+        </div>
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+
+    <div class="game-end-overlay" id="gameEndOverlay">
+        <div class="winning-message" data-winning-message>
+            <div class="winner-avatar" id="winnerAvatar"></div>
+            <p id="winningMessageText"></p>
+        </div>
+        <div class="draw-message" id="drawMessage">
+            <img src="圖/平局.png" alt="draw-image">
+        </div>
+        <div class="btn-container">
+            <button class="reset-button" id="resetButton">play again</button>
+        </div>
+    </div>
+</div>
+
+<video src="圖/chiikawabg.mp4" muted loop autoplay></video>
+
+<script src="index.js"></script>
+
+
+</body>
+</html>
