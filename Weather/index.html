@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>晴女の天气小站</title>
+    <link rel="icon" href="icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+</head>
+<style>
+  /* 设置iframe样式 */
+  iframe {
+    position: fixed; /* 固定定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* 移除边框 */
+    z-index: -1; /* 确保iframe在内容之下 */
+  }
+
+  /* 添加覆盖层并应用毛玻璃效果 */
+  .blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(5
+	2px); /* 对于旧版Safari */
+    backdrop-filter: blur(2px); /* 标准语法 */
+    z-index: 1; /* 确保覆盖层在iframe之上 */
+  }
+
+  /* 设置内容样式 */
+  .content {
+    position: relative;
+    z-index: 2; /* 确保内容在覆盖层之上 */
+    /* 其他样式... */
+  }
+</style>
+</head>
+<body>
+
+<iframe src="https://earth.nullschool.net/#current/wind/surface/level/orthographic=-229.65,39.93,1983"></iframe>
+<div class="blur-overlay"></div> <!-- 添加覆盖层 -->
+
+<div class="content">
+	
+<body onload="myFunction()">
+    <div id="loading"></div>
+    <div class="cont">
+
+    </div>
+    <div class="two">
+        <div class="card">
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search" />
+                <button>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                        width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+                            clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="weather loading">
+				<div class="other"><h2>还在犹豫是否需要晴女？先来看看天气吧！</h2>     Tips：请输入城市名拼音，国外城市请输入英文名</div>
+                <h2 class="city">Weather in Shanghai</h2>
+                <h1 class="temp">21°C</h1>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/04d.png" alt="" class="icon" />
+                    <div class="description">多云</div>
+                </div>
+                <div class="other">
+                    <div class="humidity">湿度: 60%</div>
+                    <div class="wind">风速: 6.2 km/h</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="three">
+        <div class="name"><a href="https://nanxmas.github.io/Otenki">天气不好？快找晴女！😘💁👉</a></div>
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function myFunction() {
+            preloader.style.display = 'none';
+        }
+    </script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 15,
+            glare: true,
+            reverse: true,
+            "max-glare": 0.5,
+            speed: 400
+        });
+        VanillaTilt.init(document.querySelectorAll(".card"));
+    </script>
+</body>
+</div>
+<div class="content">
+	  <div class="widget">
+<div id="ww_9c6e6369dfafe" v='1.3' loc='auto' a='{"t":"responsive","lang":"ja","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_9c6e6369dfafe_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_9c6e6369dfafe"></script>
+<div id="ww_15a06af213f6c" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl926"],"font":"Arial","sl_ics":"one_a","sl_sot":"fahrenheit","cl_bkg":"#D32F2F","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FFFFFF"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_15a06af213f6c_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_15a06af213f6c"></script>
+<div id="ww_3e08c8d9e86d2" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl3065"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#C2185B","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FFFFFF"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_3e08c8d9e86d2_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_3e08c8d9e86d2"></script>
+<div id="ww_ab3eb65302a26" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl388"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#7B1FA2","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_ab3eb65302a26_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_ab3eb65302a26"></script>
+<div id="ww_61b0442061b04" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl2946"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#512DA8","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_61b0442061b04_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_61b0442061b04"></script>
+<div id="ww_e309a912b98a0" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl2980"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#303F9F","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_e309a912b98a0_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_e309a912b98a0"></script>
+<div id="ww_9f90c14062bc8" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl3399"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#1976D2","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_9f90c14062bc8_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_9f90c14062bc8"></script>
+<div id="ww_3039a5d4a8330" v='1.3' loc='id' a='{"t":"ticker","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"fahrenheit","cl_bkg":"#0288D1","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/" id="ww_3039a5d4a8330_u" target="_blank">Weather widget</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_3039a5d4a8330"></script>
+<div id="ww_652b5d72b5d72" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl1408"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#0097A7","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_652b5d72b5d72_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_652b5d72b5d72"></script>
+<div id="ww_52ddbf6d0e039" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl2678"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#00796B","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_52ddbf6d0e039_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_52ddbf6d0e039"></script>
+<div id="ww_3887da71f5f0c" v='1.3' loc='id' a='{"t":"ticker","lang":"ja","sl_lpl":1,"ids":["wl6857"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#388E3C","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_3887da71f5f0c_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_3887da71f5f0c"></script>
+<div id="ww_40bc3659a6b4f" v='1.3' loc='id' a='{"t":"ticker","lang":"zh","sl_lpl":1,"ids":["wl2949"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#689F38","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#FFFFFF","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_40bc3659a6b4f_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_40bc3659a6b4f"></script>
+
+
+   </div>
+  </div>
