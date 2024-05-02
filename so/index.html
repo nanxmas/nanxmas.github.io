@@ -8,23 +8,56 @@
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="styles.744593d2.css">
     <link rel="stylesheet" href="mdui.min.6ee1778a.css">
-    <style>
-        .background-frame {
-            position: fixed; /* 固定位置，使iframe作为背景 */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none; /* 移除边框 */
-            z-index: -1; /* 置于内容之下 */
-            overflow: hidden; /* 防止滚动穿透 */
-            -webkit-overflow-scrolling: auto; /* 禁用iOS回弹效果 */
-        }
-    </style>
 </head>
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-drawer-body-left mdui-appbar-with-toolbar">
-    <!-- 页面内容 -->
-    <iframe src="https://hikari.obfs.dev" class="background-frame"></iframe>
+    <div id="about">
+        <div id="nav">
+            <header class="mdui-appbar mdui-appbar-fixed">
+                <div class="mdui-toolbar mdui-color-theme">
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#drawer',swipe: true}">
+                        <i class="mdui-icon material-icons">menu</i>
+                    </a>
+                    <a href="javascript:;" class="mdui-typo-headline mdui-hidden-xs">以图搜图</a>
+                    <div class="mdui-toolbar-spacer"></div>
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                        <i class="mdui-icon material-icons" mdui-dialog="{target: '#search-dialog'}" mdui-tooltip="{content: '搜索'}">search</i>
+                    </a>
+                </div>
+            </header>
+            <div class="mdui-drawer" id="drawer">
+                <ul class="mdui-list" mdui-collapse="{accordion: true}">
+                    <a href="index.html" class="mdui-list-item mdui-ripple">
+                        <span style="font-size:24px" class="mdui-list-item-icon">あ</span>
+                        <div class="mdui-list-item-content">搜图</div>
+                    </a>
+                    <a href="https://s.xinu.ink" class="mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">error</i>
+                        <div class="mdui-list-item-content">系统状态</div>
+                    </a>
+                </ul>
+                <footer id="drawer-footer">
+                    <div class="mdui-typo">
+                        <div class="mdui-typo-caption-opacity">Powered by MC</div>
+                        <div class="mdui-typo-caption-opacity">Copyright © 2024</div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+<style>
+    .background-frame {
+        position: fixed; /* 固定位置，使iframe作为背景 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none; /* 移除边框 */
+        z-index: -1; /* 置于内容之下 */
+        overflow: hidden; /* 防止滚动穿透 */
+		 -webkit-overflow-scrolling: auto;
+    }
+</style>
+<iframe src="https://hikari.obfs.dev" class="background-frame"></iframe>
     <script>
         document.addEventListener('scroll', function(e) {
             var element = e.target;
@@ -37,5 +70,8 @@
             }
         });
     </script>
+        </div>
+    </div>
+    <script src="main.e2b34896.js"></script>
 </body>
 </html>
