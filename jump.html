@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UID 跳转页面</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      color: #333;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .navbar a:hover {
+      background-color: #555;
+    }
+    .navbar a:first-child {
+      margin-right: auto;
+    }
+  </style>
+  <script>
+    function redirectToUID() {
+      var uid = document.getElementById('uid').value;
+      var url = 'https://pix.xinu.ink/users/' + uid;
+      window.location.href = url;
+    }
+
+    function redirectToArtwork() {
+      var artworkId = document.getElementById('artworkId').value;
+      var artworkUrl = 'https://pix.xinu.ink/artworks/' + artworkId;
+      window.location.href = artworkUrl;
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <a href=" ">返回主站</a >
+    <a href="https://s.xinu.ink/">系统状态</a >
+  </div>
+  <h2>查找画师请输入UID</h2>
+  <input type="text" id="uid" placeholder="输入UID">
+  <button onclick="redirectToUID()">跳转到画师</button>
+
+  <h2>查找作品请输入作品ID</h2>
+  <input type="text" id="artworkId" placeholder="输入作品ID">
+  <button onclick="redirectToArtwork()">跳转到作品</button>
+</body>
+</html>
